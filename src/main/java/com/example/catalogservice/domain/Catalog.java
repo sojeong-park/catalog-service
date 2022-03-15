@@ -51,4 +51,8 @@ public class Catalog implements Serializable {
     public Date getCreatedAt() {
         return createdAt;
     }
+
+    public void calculateStock(int quantity) {
+        this.stock -= quantity;
+    };
 }
