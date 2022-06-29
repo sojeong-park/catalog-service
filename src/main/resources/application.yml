@@ -31,4 +31,4 @@ eureka:
 
 logging:
   level:
-    com.example.orderservice: Debug
+    com.example.orderservice: prod
