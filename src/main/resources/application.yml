@@ -27,7 +27,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://3.39.94.98:8761/eureka
+      defaultZone: http://3.39.94.98:8761/eurekatest
 
 logging:
   level:

@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("catalog-service")
@@ -37,6 +39,8 @@ public class CatalogController {
     public ResponseEntity<List<CatalogResponse>> getAllCatalogs() {
         Iterable<Catalog> catalogs = catalogService.findAllCatalogs();
         List<CatalogResponse> result = new ArrayList<>();
+        Map<CatalogResponse, String> test = new HashMap();
+        List<Catalog> test2 = new ArrayList<>();
         catalogs.forEach(v -> {
             result.add(new ModelMapper().map(v, CatalogResponse.class));
         });
