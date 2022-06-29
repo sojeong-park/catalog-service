@@ -40,6 +40,7 @@ public class CatalogController {
         Iterable<Catalog> catalogs = catalogService.findAllCatalogs();
         List<CatalogResponse> result = new ArrayList<>();
         Map<CatalogResponse, String> test = new HashMap();
+        List<Catalog> test2 = new ArrayList<>();
         catalogs.forEach(v -> {
             result.add(new ModelMapper().map(v, CatalogResponse.class));
         });
