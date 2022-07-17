@@ -46,4 +46,9 @@ public class CatalogController {
         });
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
+
+    @GetMapping("/health-check/test")
+    public String testApi() {
+        return String.format("test %s", env.getProperty("local.server.port"));
+    }
 }
