@@ -54,9 +54,5 @@ public class Catalog implements Serializable {
 
     public void calculateStock(int quantity) {
         this.stock -= quantity;
-    }
-
-    public void testMethod() {
-        System.out.println("test commit");
-    }
+    };
 }
